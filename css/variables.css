@@ -32,36 +32,70 @@
   --brand-gray: #334155;
   --brand-light-gray: #f1f5f9;
 
-  /* Soothing Pastel Palette System */
-  --pastel-blue-bg: #eff6ff;
-  --pastel-blue-surface: #dbeafe;
-  --pastel-blue-border: #bfdbfe;
-  --pastel-blue-text: #1d4ed8;
+  /* "GELATO DAYS" Curated Pastel Palette System (User Image Swatches) */
+  --gelato-pink: #FFCBE1;
+  --gelato-pink-tint: #FFF0F7;
+  --gelato-pink-border: #F3B5CD;
+  --gelato-pink-dark: #8F2755;
 
-  --pastel-sage-bg: #f0fdf4;
-  --pastel-sage-surface: #dcfce7;
-  --pastel-sage-border: #bbf7d0;
-  --pastel-sage-text: #15803d;
+  --gelato-mint: #D6E5BD;
+  --gelato-mint-tint: #F3F7ED;
+  --gelato-mint-border: #BDD1A0;
+  --gelato-mint-dark: #355320;
 
-  --pastel-lavender-bg: #f5f3ff;
-  --pastel-lavender-surface: #ede9fe;
-  --pastel-lavender-border: #ddd6fe;
-  --pastel-lavender-text: #6d28d9;
+  --gelato-yellow: #F9E1A8;
+  --gelato-yellow-tint: #FFF9EB;
+  --gelato-yellow-border: #E8CC8B;
+  --gelato-yellow-dark: #74530A;
 
-  --pastel-peach-bg: #fff7ed;
-  --pastel-peach-surface: #ffedd5;
-  --pastel-peach-border: #fed7aa;
-  --pastel-peach-text: #c2410c;
+  --gelato-blue: #BCD8EC;
+  --gelato-blue-tint: #EEF5FB;
+  --gelato-blue-border: #9FC3DC;
+  --gelato-blue-dark: #1E4E73;
 
-  --pastel-rose-bg: #fff1f2;
-  --pastel-rose-surface: #ffe4e6;
-  --pastel-rose-border: #fecdd3;
-  --pastel-rose-text: #be123c;
+  --gelato-lavender: #DCCCEC;
+  --gelato-lavender-tint: #F6F1FB;
+  --gelato-lavender-border: #C8B3DC;
+  --gelato-lavender-dark: #4F326D;
 
-  --pastel-amber-bg: #fffbeb;
-  --pastel-amber-surface: #fef3c7;
-  --pastel-amber-border: #fde68a;
-  --pastel-amber-text: #b45309;
+  --gelato-peach: #FFDAB4;
+  --gelato-peach-tint: #FFF5EA;
+  --gelato-peach-border: #F4C497;
+  --gelato-peach-dark: #8C4910;
+
+  --gelato-cream: #FAF6F3;
+  --gelato-white: #FFFFFF;
+
+  /* Legacy mappings mapped directly to Gelato Days */
+  --pastel-blue-bg: var(--gelato-blue-tint);
+  --pastel-blue-surface: var(--gelato-blue);
+  --pastel-blue-border: var(--gelato-blue-border);
+  --pastel-blue-text: var(--gelato-blue-dark);
+
+  --pastel-sage-bg: var(--gelato-mint-tint);
+  --pastel-sage-surface: var(--gelato-mint);
+  --pastel-sage-border: var(--gelato-mint-border);
+  --pastel-sage-text: var(--gelato-mint-dark);
+
+  --pastel-lavender-bg: var(--gelato-lavender-tint);
+  --pastel-lavender-surface: var(--gelato-lavender);
+  --pastel-lavender-border: var(--gelato-lavender-border);
+  --pastel-lavender-text: var(--gelato-lavender-dark);
+
+  --pastel-peach-bg: var(--gelato-peach-tint);
+  --pastel-peach-surface: var(--gelato-peach);
+  --pastel-peach-border: var(--gelato-peach-border);
+  --pastel-peach-text: var(--gelato-peach-dark);
+
+  --pastel-rose-bg: var(--gelato-pink-tint);
+  --pastel-rose-surface: var(--gelato-pink);
+  --pastel-rose-border: var(--gelato-pink-border);
+  --pastel-rose-text: var(--gelato-pink-dark);
+
+  --pastel-amber-bg: var(--gelato-yellow-tint);
+  --pastel-amber-surface: var(--gelato-yellow);
+  --pastel-amber-border: var(--gelato-yellow-border);
+  --pastel-amber-text: var(--gelato-yellow-dark);
 
   /* Typography */
   --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;

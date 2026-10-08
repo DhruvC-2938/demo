@@ -16,15 +16,15 @@
   const subjectBtns = document.querySelectorAll('.gv-subject-btn');
   const activeSubjectBadge = document.getElementById('gvActiveSubject');
 
-  // Curated Soothing Pastel Color Swatches
+  // Curated "GELATO DAYS" Pastel Palette Swatches
   const PASTEL_PALETTE = {
-    blue: { fill: '#dbeafe', stroke: '#3b82f6', text: '#1d4ed8', glow: 'rgba(59, 130, 246, 0.25)' },
-    lavender: { fill: '#ede9fe', stroke: '#8b5cf6', text: '#6d28d9', glow: 'rgba(139, 92, 246, 0.25)' },
-    sage: { fill: '#dcfce7', stroke: '#22c55e', text: '#15803d', glow: 'rgba(34, 197, 94, 0.25)' },
-    peach: { fill: '#ffedd5', stroke: '#f97316', text: '#c2410c', glow: 'rgba(249, 115, 22, 0.25)' },
-    rose: { fill: '#ffe4e6', stroke: '#f43f5e', text: '#be123c', glow: 'rgba(244, 63, 94, 0.25)' },
-    amber: { fill: '#fef3c7', stroke: '#eab308', text: '#a16207', glow: 'rgba(234, 179, 8, 0.25)' },
-    cyan: { fill: '#cffafe', stroke: '#06b6d4', text: '#0e7490', glow: 'rgba(6, 182, 212, 0.25)' }
+    blue: { fill: '#BCD8EC', stroke: '#7DAFCC', text: '#1E4E73', glow: 'rgba(188, 216, 236, 0.55)' },
+    lavender: { fill: '#DCCCEC', stroke: '#B39EC9', text: '#4F326D', glow: 'rgba(220, 204, 236, 0.55)' },
+    sage: { fill: '#D6E5BD', stroke: '#A9C289', text: '#355320', glow: 'rgba(214, 229, 189, 0.55)' },
+    peach: { fill: '#FFDAB4', stroke: '#E8AF7E', text: '#8C4910', glow: 'rgba(255, 218, 180, 0.55)' },
+    rose: { fill: '#FFCBE1', stroke: '#E89CBE', text: '#8F2755', glow: 'rgba(255, 203, 225, 0.55)' },
+    amber: { fill: '#F9E1A8', stroke: '#D6B56E', text: '#74530A', glow: 'rgba(249, 225, 168, 0.55)' },
+    cyan: { fill: '#BCD8EC', stroke: '#7DAFCC', text: '#1E4E73', glow: 'rgba(188, 216, 236, 0.55)' }
   };
 
   // 3 Curricula Graph Models

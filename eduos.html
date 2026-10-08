@@ -77,7 +77,7 @@
   <!-- Hero Section -->
   <section class="hero" style="padding-bottom: 60px;">
     <div class="container" style="text-align: center; max-width: 860px;">
-      <div class="eyebrow">EDUOS // KNOWLEDGE GRAPH ENGINE</div>
+      <div class="gelato-tag blue">KNOWLEDGE GRAPH ENGINE</div>
       <h1 class="hero-title">
         The dependency chain is the curriculum.
       </h1>
@@ -90,19 +90,19 @@
         <a href="cockpit.html" class="btn btn-white">View Teacher Cockpit &rarr;</a>
       </div>
 
-      <!-- 3D Knowledge Graph Video & Interactive 60fps Studio (Pastel Palette) -->
+      <!-- 3D Knowledge Graph Video & Interactive 60fps Studio (Gelato Days) -->
       <div class="graph-video-studio" id="graphStudio">
         <div class="gv-topbar">
-          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-            <div class="gv-status-tag">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
               <span class="gv-pulse-dot"></span>
-              <span>LIVE 3D SIMULATION &bull; 60 FPS</span>
+              <span class="mono" style="font-size: 0.74rem; font-weight: 700; color: var(--gelato-mint-dark);">LIVE 3D SIMULATION &bull; 60 FPS</span>
             </div>
-            <span id="gvActiveSubject" class="gv-stream-title">PHYSICS: ELECTRICITY &rarr; OPTICS DEPENDENCY MESH</span>
+            <span id="gvActiveSubject" class="gv-stream-title" style="color: var(--gelato-blue-dark);">PHYSICS: ELECTRICITY &rarr; OPTICS DEPENDENCY MESH</span>
           </div>
 
           <div class="gv-subject-tabs">
-            <span class="mono" style="font-size: 0.7rem; color: #94a3b8; margin-right: 4px;">CURRICULUM:</span>
+            <span class="mono" style="font-size: 0.7rem; color: #64748b; margin-right: 4px;">CURRICULUM:</span>
             <button class="gv-subject-btn active" data-subject="physics">Physics</button>
             <button class="gv-subject-btn" data-subject="calculus">Calculus</button>
             <button class="gv-subject-btn" data-subject="cs">CompSci</button>
@@ -111,12 +111,6 @@
 
         <div class="gv-viewport">
           <canvas id="graphVideoCanvas" class="gv-canvas"></canvas>
-          <div class="gv-overlay-hud">
-            <div class="gv-hud-chip">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-              <span>DRAG TO ORBIT 3D VIEW &bull; HOVER NODE FOR CONCEPT SPECS</span>
-            </div>
-          </div>
         </div>
 
         <div class="gv-controls-bar">
@@ -142,10 +136,10 @@
   </section>
 
   <!-- The 5 Interlocking Layers -->
-  <section class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <section class="section section-gelato-lavender">
     <div class="container">
       <div class="section-header">
-        <div class="eyebrow">ACADEMIC ARCHITECTURE</div>
+        <div class="gelato-tag lavender">ACADEMIC ARCHITECTURE</div>
         <h2 class="section-title">The Five Layers of EduOS</h2>
         <p class="section-subtitle">
           Designed with one core rule: Complexity is failure. If it looks complicated, no one uses it. Every screen has one job.
@@ -154,61 +148,46 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
         <!-- Layer 1 -->
-        <div class="card card-pastel-blue">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-            <span class="badge-pastel blue">LAYER 01</span>
-            <span class="mono" style="font-size: 0.72rem; color: var(--pastel-blue-text);">GRAPH ENGINE</span>
-          </div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #090d16;">The Knowledge Graph</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+        <div class="card card-gelato-blue">
+          <div class="gelato-tag blue">01 &bull; KNOWLEDGE GRAPH</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #090d16;">Living Dependency Mesh</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
             Built once, maintained always. A dependency map of human knowledge where every concept has parents it depends on and children it unlocks.
           </p>
         </div>
 
         <!-- Layer 2 -->
-        <div class="card card-pastel-lavender">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-            <span class="badge-pastel lavender">LAYER 02</span>
-            <span class="mono" style="font-size: 0.72rem; color: var(--pastel-lavender-text);">SOCRATIC PROMPT</span>
-          </div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #090d16;">Student Inquiry Interface</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+        <div class="card card-gelato-lavender">
+          <div class="gelato-tag lavender">02 &bull; SOCRATIC INQUIRY</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #090d16;">Student Inquiry Interface</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
             Not a generic bot. An interviewer. It does not explain — it asks. It detects where the student's mental model breaks and creates the question that makes them need the answer.
           </p>
         </div>
 
         <!-- Layer 3 -->
-        <div class="card card-pastel-sage">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-            <span class="badge-pastel sage">LAYER 03</span>
-            <span class="mono" style="font-size: 0.72rem; color: var(--pastel-sage-text);">FACULTY PREVIEW</span>
-          </div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #090d16;">The Teacher Cockpit</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+        <div class="card card-gelato-mint">
+          <div class="gelato-tag mint">03 &bull; FACULTY RADAR</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #090d16;">The Teacher Cockpit</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
             Tells professors before class: <em>"14 students don't understand potential difference. The water-height analogy may help."</em> 1-click PPTs & question papers.
           </p>
         </div>
 
         <!-- Layer 4 -->
-        <div class="card card-pastel-peach">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-            <span class="badge-pastel peach">LAYER 04</span>
-            <span class="mono" style="font-size: 0.72rem; color: var(--pastel-peach-text);">DAILY PUSH</span>
-          </div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #090d16;">The Pinch Engine</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+        <div class="card card-gelato-peach">
+          <div class="gelato-tag peach">04 &bull; INVISIBLE SOURCE</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #090d16;">The Pinch Engine</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
             How you reach the student who already gave up. One connection per day sent via WhatsApp. Invisible source. Never feels like school.
           </p>
         </div>
 
         <!-- Layer 5 -->
-        <div class="card card-pastel-rose">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-            <span class="badge-pastel rose">LAYER 05</span>
-            <span class="mono" style="font-size: 0.72rem; color: var(--pastel-rose-text);">SPACED MEMORY</span>
-          </div>
-          <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #090d16;">The Feedback Loop</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+        <div class="card card-gelato-pink">
+          <div class="gelato-tag pink">05 &bull; SPACED RECALL</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #090d16;">The Feedback Loop</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; line-height: 1.6;">
             Active recall flashcards trigger 3 days after comprehension. Teachers get confusion heatmaps; parents get windows into a developing mind.
           </p>
         </div>

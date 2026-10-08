@@ -91,56 +91,56 @@
   </section>
 
   <!-- Interactive ROI Calculator -->
-  <section class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(20px); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <section class="section section-gelato-peach">
     <div class="container">
-      <div class="card" style="max-width: 960px; margin: 0 auto; padding: 48px;">
+      <div class="card" style="max-width: 960px; margin: 0 auto; padding: 48px; background: rgba(255, 255, 255, 0.92);">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
           <!-- Sliders -->
           <div>
-            <span class="eyebrow" style="margin-bottom: 12px;">CALCULATE SAVINGS</span>
-            <h3 style="font-size: 1.5rem; margin-bottom: 24px; color: #090d16;">Your Institution Size</h3>
+            <div class="gelato-tag peach">CALCULATE SAVINGS</div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 24px; color: #090d16;">Your Institution Size</h3>
 
             <div style="margin-bottom: 28px;">
               <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 10px;">
-                <span style="font-weight: 600;">Enrolled Student Body</span>
-                <span id="studentValLabel" class="mono" style="font-weight: 700; color: #090d16;">1,000 Students</span>
+                <span style="font-weight: 600; color: #090d16;">Enrolled Student Body</span>
+                <span id="studentValLabel" class="mono" style="font-weight: 700; color: var(--gelato-blue-dark);">1,000 Students</span>
               </div>
               <input type="range" id="studentRange" min="300" max="8000" step="50" value="1000" class="clean-slider">
             </div>
 
             <div style="margin-bottom: 28px;">
               <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 10px;">
-                <span style="font-weight: 600;">Teaching Faculty & HODs</span>
-                <span id="facultyValLabel" class="mono" style="font-weight: 700; color: #090d16;">50 Faculty</span>
+                <span style="font-weight: 600; color: #090d16;">Teaching Faculty & HODs</span>
+                <span id="facultyValLabel" class="mono" style="font-weight: 700; color: var(--gelato-mint-dark);">50 Faculty</span>
               </div>
               <input type="range" id="facultyRange" min="10" max="400" step="5" value="50" class="clean-slider">
             </div>
 
-            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+            <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">
               * Calculations based on 1,000-student benchmark: 1 msg / 0.8s rate-limiting, 70% direct SQL resolution, and 4.5 hrs saved per faculty per week.
             </div>
           </div>
 
-          <!-- Dynamic Output Grid -->
+          <!-- Dynamic Output Grid with Gelato Colors -->
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+            <div class="card card-gelato-mint" style="padding: 22px; text-align: center; border-radius: 14px;">
               <div id="metricAdminHours" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">270 hrs</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">Admin Manual Messaging Saved / mo</div>
+              <div style="font-size: 0.8rem; color: #334155; font-weight: 500;">Admin Manual Messaging Saved / mo</div>
             </div>
 
-            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+            <div class="card card-gelato-blue" style="padding: 22px; text-align: center; border-radius: 14px;">
               <div id="metricFacultyHours" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">725 hrs</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">Faculty Prep & Chasing Saved / mo</div>
+              <div style="font-size: 0.8rem; color: #334155; font-weight: 500;">Faculty Prep & Chasing Saved / mo</div>
             </div>
 
-            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+            <div class="card card-gelato-yellow" style="padding: 22px; text-align: center; border-radius: 14px;">
               <div id="metricBanRisk" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">0.0%</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">WhatsApp Ban Probability</div>
+              <div style="font-size: 0.8rem; color: #334155; font-weight: 500;">WhatsApp Ban Probability</div>
             </div>
 
-            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+            <div class="card card-gelato-lavender" style="padding: 22px; text-align: center; border-radius: 14px;">
               <div id="metricCostSaved" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">₹5.3L</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">Monthly Productivity Value</div>
+              <div style="font-size: 0.8rem; color: #334155; font-weight: 500;">Monthly Productivity Value</div>
             </div>
           </div>
         </div>
@@ -149,10 +149,10 @@
   </section>
 
   <!-- Transparent Tier Cards -->
-  <section class="section">
+  <section class="section section-gelato-blue">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow" style="margin-bottom: 16px;">DEPLOYMENT TIERS</span>
+        <div class="gelato-tag blue">DEPLOYMENT TIERS</div>
         <h2 class="section-title">Institutional Pricing</h2>
         <p class="section-subtitle">
           Transparent, per-institution licensing with zero hidden integration fees.
@@ -161,36 +161,32 @@
 
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1040px; margin: 0 auto;">
         <!-- Pilot -->
-        <div class="card card-pastel-blue">
-          <div style="margin-bottom: 12px;">
-            <span class="badge-pastel blue">TIER 01 // PILOT</span>
-          </div>
-          <h3 style="font-size: 1.4rem; color: #090d16; margin-bottom: 6px;">Department Pilot</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Single department proof of value</p>
+        <div class="card card-gelato-blue">
+          <div class="gelato-tag blue">DEPARTMENT PILOT</div>
+          <h3 style="font-size: 1.45rem; color: #090d16; margin-bottom: 6px;">Pilot License</h3>
+          <p style="font-size: 0.9rem; color: #334155; margin-bottom: 20px;">Single department proof of value</p>
           <div style="font-size: 2.5rem; font-weight: 800; color: #090d16; margin-bottom: 6px;">Free</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">30 days • Up to 500 students</div>
+          <div style="font-size: 0.85rem; color: #475569; margin-bottom: 24px;">30 days • Up to 500 students</div>
 
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 32px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: #334155; margin-bottom: 32px;">
             <li>&bull; 1 WhatsApp Number instance</li>
             <li>&bull; Herald Auto-Responder</li>
             <li>&bull; Nexus Hinglish Approval flow</li>
             <li>&bull; Core Physics & CS Graphs</li>
           </ul>
 
-          <a href="#pilot" class="btn btn-white btn-sm" style="width: 100%;">Start Department Pilot &rarr;</a>
+          <a href="#pilot" class="btn btn-black btn-sm" style="width: 100%;">Start Department Pilot &rarr;</a>
         </div>
 
         <!-- Campus OS -->
-        <div class="card card-pastel-sage" style="border: 2px solid var(--pastel-sage-border); box-shadow: var(--shadow-lg);">
-          <div style="margin-bottom: 12px;">
-            <span class="badge-pastel sage">TIER 02 // RECOMMENDED</span>
-          </div>
-          <h3 style="font-size: 1.4rem; color: #090d16; margin-bottom: 6px;">Campus Operating System</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Full institution deployment</p>
+        <div class="card card-gelato-mint" style="box-shadow: var(--shadow-lg);">
+          <div class="gelato-tag mint">RECOMMENDED &bull; CAMPUS OS</div>
+          <h3 style="font-size: 1.45rem; color: #090d16; margin-bottom: 6px;">Campus Operating System</h3>
+          <p style="font-size: 0.9rem; color: #334155; margin-bottom: 20px;">Full institution deployment</p>
           <div style="font-size: 2.5rem; font-weight: 800; color: #090d16; margin-bottom: 6px;">Annual</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">Tailored per student body</div>
+          <div style="font-size: 0.85rem; color: #475569; margin-bottom: 24px;">Tailored per student body</div>
 
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 32px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: #334155; margin-bottom: 32px;">
             <li>&bull; Full FLUX Suite (Herald, Nexus, Dispatch)</li>
             <li>&bull; EduOS Knowledge Graph + Pinch Engine</li>
             <li>&bull; Teacher Cockpit & Pre-Class Radar</li>
@@ -203,23 +199,21 @@
         </div>
 
         <!-- Enterprise -->
-        <div class="card card-pastel-lavender">
-          <div style="margin-bottom: 12px;">
-            <span class="badge-pastel lavender">TIER 03 // FEDERATION</span>
-          </div>
-          <h3 style="font-size: 1.4rem; color: #0a0d14; margin-bottom: 6px;">University System</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Multi-campus groups & states</p>
+        <div class="card card-gelato-lavender">
+          <div class="gelato-tag lavender">FEDERATION &bull; UNIVERSITY SYSTEM</div>
+          <h3 style="font-size: 1.45rem; color: #0a0d14; margin-bottom: 6px;">University System</h3>
+          <p style="font-size: 0.9rem; color: #334155; margin-bottom: 20px;">Multi-campus groups & states</p>
           <div style="font-size: 2.5rem; font-weight: 800; color: #0a0d14; margin-bottom: 6px;">Custom</div>
-          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">Multi-college isolation</div>
+          <div style="font-size: 0.85rem; color: #475569; margin-bottom: 24px;">Multi-college isolation</div>
 
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 32px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: #334155; margin-bottom: 32px;">
             <li>&bull; Multi-college tenant isolation</li>
             <li>&bull; Custom fine-tuned LLM on campus data</li>
             <li>&bull; On-Premise or Private VPC deployment</li>
             <li>&bull; Custom SIS / ERP Database Connectors</li>
           </ul>
 
-          <a href="#pilot" class="btn btn-white btn-sm" style="width: 100%;">Contact Enterprise Team &rarr;</a>
+          <a href="#pilot" class="btn btn-black btn-sm" style="width: 100%;">Contact Enterprise Team &rarr;</a>
         </div>
       </div>
     </div>

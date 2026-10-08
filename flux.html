@@ -102,10 +102,10 @@
   </section>
 
   <!-- The 3 Autonomous Engines -->
-  <section id="architecture" class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <section id="architecture" class="section section-gelato-mint">
     <div class="container">
       <div class="section-header">
-        <div class="eyebrow">CAMPUS WORKFLOW ENGINES</div>
+        <div class="gelato-tag mint">CAMPUS WORKFLOW ENGINES</div>
         <h2 class="section-title">The Three Intercepting Engines</h2>
         <p class="section-subtitle">
           All 1,000 students, 50 teachers, 5 HODs, and admin message ONE dedicated WhatsApp number. Engines never call each other directly; all cross-engine state routes through the database contract.
@@ -114,79 +114,69 @@
 
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
         <!-- Herald -->
-        <div class="card card-pastel-blue">
-          <div style="margin-bottom: 12px;">
-            <span class="badge-pastel blue">ENGINE 01 // HERALD</span>
-          </div>
-          <h3 style="font-size: 1.35rem; margin-bottom: 8px; color: #090d16;">Inbound Auto-Responder</h3>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px;">
+        <div class="card card-gelato-blue">
+          <div class="gelato-tag blue">01 &bull; INBOUND WEBHOOK</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: #090d16;">Herald Auto-Responder</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; margin-bottom: 16px; line-height: 1.6;">
             The front door for every single message. Intercepts webhooks, checks active cases, and resolves 70% of messages directly from the database without hallucinations.
           </p>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: #334155; margin-bottom: 20px;">
             <li>&bull; Resolves attendance percentage & marks in 0.18s</li>
             <li>&bull; Auto-registers new students on their first message</li>
             <li>&bull; Answers pending assignments & deadline FAQs</li>
             <li>&bull; Routes complex cases into the Nexus queue</li>
           </ul>
-          <div class="badge-pastel blue" style="width: 100%; justify-content: center; padding: 8px 12px; font-size: 0.72rem;">
+          <div class="mono" style="font-size: 0.78rem; font-weight: 700; color: var(--gelato-blue-dark); margin-top: 18px;">
             DIRECT DB READ &bull; 0.18s LATENCY
           </div>
         </div>
 
         <!-- Nexus -->
-        <div class="card card-pastel-lavender">
-          <div style="margin-bottom: 12px;">
-            <span class="badge-pastel lavender">ENGINE 02 // NEXUS</span>
-          </div>
-          <h3 style="font-size: 1.35rem; margin-bottom: 8px; color: #090d16;">Routing & State Machine</h3>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px;">
+        <div class="card card-gelato-lavender">
+          <div class="gelato-tag lavender">02 &bull; STATE MACHINE</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: #090d16;">Nexus Routing Engine</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; margin-bottom: 16px; line-height: 1.6;">
             A case state machine where WhatsApp <em>is</em> the approval UI. Routes cases to faculty, collects natural language decisions, and records an append-only audit trail.
           </p>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: #334155; margin-bottom: 20px;">
             <li>&bull; Parses Hinglish approvals: "haan 2 din do", "ok"</li>
             <li>&bull; 24h timeout auto-escalates to the Admin Panel</li>
             <li>&bull; Conflict of interest detection for grievances</li>
             <li>&bull; Immutable audit trail in <code>case_events</code> (No DELETEs)</li>
           </ul>
-          <div class="badge-pastel lavender" style="width: 100%; justify-content: center; padding: 8px 12px; font-size: 0.72rem;">
+          <div class="mono" style="font-size: 0.78rem; font-weight: 700; color: var(--gelato-lavender-dark); margin-top: 18px;">
             WHATSAPP IS THE APPROVAL INTERFACE
           </div>
         </div>
 
         <!-- Dispatch -->
-        <div class="card card-pastel-sage">
-          <div style="margin-bottom: 12px;">
-            <span class="badge-pastel sage">ENGINE 03 // DISPATCH</span>
-          </div>
-          <h3 style="font-size: 1.35rem; margin-bottom: 8px; color: #090d16;">Outbound Communication</h3>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px;">
+        <div class="card card-gelato-mint">
+          <div class="gelato-tag mint">03 &bull; RATE LIMITER</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: #090d16;">Dispatch Outbound</h3>
+          <p style="font-size: 0.95rem; color: #1e293b; margin-bottom: 16px; line-height: 1.6;">
             All outbound broadcasts route through Dispatch. Strictly rate-limits messages to guarantee the institution's WhatsApp number never gets banned.
           </p>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: #334155; margin-bottom: 20px;">
             <li>&bull; Rate-limited at 1 message / 0.8s via Baileys bridge</li>
             <li>&bull; Drafts professional notices from 1 sentence</li>
             <li>&bull; Admin approval gate: no bulk send without sign-off</li>
             <li>&bull; Emergency channel: 5 msg/sec with 30s undo window</li>
           </ul>
-          <div class="badge-pastel sage" style="width: 100%; justify-content: center; padding: 8px 12px; font-size: 0.72rem;">
+          <div class="mono" style="font-size: 0.78rem; font-weight: 700; color: var(--gelato-mint-dark); margin-top: 18px;">
             ANTI-BAN RATE LIMITING: 1,000 RECIPIENTS ≈ 14M
           </div>
         </div>
       </div>
 
       <!-- Critical C1 Golden Rule Callout -->
-      <div class="card card-pastel-amber" style="margin-top: 48px; padding: 28px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
-        <div style="display: flex; gap: 16px; align-items: flex-start;">
-          <span class="badge-pastel amber" style="font-size: 0.82rem; padding: 4px 10px;">[C1] ARCHITECTURAL INVARIANT</span>
-          <div>
-            <h4 style="font-size: 1.15rem; color: #090d16; margin-bottom: 6px;">
-              The Critical C1 Golden Rule: Check active_threads Before VANGUARD Always
-            </h4>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-              Every incoming WhatsApp message — from students, faculty, or HODs — enters through the same Herald webhook. Before running LLM intent classification, Herald queries <code>active_threads</code>: <em>"Is this sender's phone in an open Nexus case?"</em> If YES: route directly to <code>nexus.handle_reply()</code> and <strong>VANGUARD is completely skipped</strong>. Without this check, faculty replies like *"yes give 2 days"* or *"haan theek hai"* get mistakenly classified as new student questions.
-            </p>
-          </div>
-        </div>
+      <div class="card card-gelato-yellow" style="margin-top: 48px; padding: 32px; border-radius: var(--radius-lg);">
+        <div class="gelato-tag yellow" style="font-size: 0.82rem;">[C1] ARCHITECTURAL INVARIANT</div>
+        <h4 style="font-size: 1.25rem; color: #090d16; margin-bottom: 8px;">
+          The Critical C1 Golden Rule: Check active_threads Before VANGUARD Always
+        </h4>
+        <p style="font-size: 0.98rem; color: #1e293b; line-height: 1.65;">
+          Every incoming WhatsApp message — from students, faculty, or HODs — enters through the same Herald webhook. Before running LLM intent classification, Herald queries <code>active_threads</code>: <em>"Is this sender's phone in an open Nexus case?"</em> If YES: route directly to <code>nexus.handle_reply()</code> and <strong>VANGUARD is completely skipped</strong>. Without this check, faculty replies like *"yes give 2 days"* or *"haan theek hai"* get mistakenly classified as new student questions.
+        </p>
       </div>
     </div>
   </section>

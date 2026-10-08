@@ -58,29 +58,29 @@
   const grid = document.getElementById('brainPipelinesGrid');
 
   if (grid) {
-    const pastelThemes = [
-      { card: 'card-pastel-blue', badge: 'blue' },
-      { card: 'card-pastel-lavender', badge: 'lavender' },
-      { card: 'card-pastel-sage', badge: 'sage' },
-      { card: 'card-pastel-peach', badge: 'peach' },
-      { card: 'card-pastel-amber', badge: 'amber' },
-      { card: 'card-pastel-rose', badge: 'rose' }
+    const gelatoThemes = [
+      { card: 'card-gelato-blue', tag: 'blue' },
+      { card: 'card-gelato-lavender', tag: 'lavender' },
+      { card: 'card-gelato-mint', tag: 'mint' },
+      { card: 'card-gelato-peach', tag: 'peach' },
+      { card: 'card-gelato-yellow', tag: 'yellow' },
+      { card: 'card-gelato-pink', tag: 'pink' }
     ];
 
     PIPELINES.forEach((p, index) => {
-      const theme = pastelThemes[index % pastelThemes.length];
+      const theme = gelatoThemes[index % gelatoThemes.length];
       const card = document.createElement('div');
       card.className = `pipeline-card ${theme.card}`;
       card.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-          <span class="badge-pastel ${theme.badge}">${p.code} PIPELINE</span>
-          <span class="badge-pastel sage" style="font-size: 0.68rem; padding: 2px 7px;">${p.liveStatus}</span>
+          <div class="gelato-tag ${theme.tag}" style="margin-bottom: 0;">${p.code} PIPELINE</div>
+          <span class="mono" style="font-size: 0.74rem; font-weight: 700; color: var(--gelato-mint-dark);">${p.liveStatus}</span>
         </div>
-        <h4 class="pipeline-name">${p.title}</h4>
-        <div class="pipeline-cron">SCHEDULE: ${p.cron}</div>
-        <p class="pipeline-desc">${p.desc}</p>
-        <div class="pipeline-output-table">
-          <span style="color: var(--text-muted);">CONTRACT TABLE:</span> <code>${p.table}</code>
+        <h4 class="pipeline-name" style="font-size: 1.15rem; color: #090d16; margin-bottom: 6px;">${p.title}</h4>
+        <div class="pipeline-cron" style="color: #64748b; font-size: 0.78rem; margin-bottom: 10px;">SCHEDULE: ${p.cron}</div>
+        <p class="pipeline-desc" style="color: #1e293b; font-size: 0.9rem; line-height: 1.55; margin-bottom: 14px;">${p.desc}</p>
+        <div class="pipeline-output-table" style="background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(0, 0, 0, 0.08); padding: 8px 12px; border-radius: 8px; font-family: var(--font-mono); font-size: 0.74rem;">
+          <span style="color: #64748b;">DB TABLE:</span> <code style="color: #090d16; font-weight: 700;">${p.table}</code>
         </div>
       `;
       grid.appendChild(card);

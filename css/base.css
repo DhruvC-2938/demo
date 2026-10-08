@@ -10,7 +10,7 @@
 
 html {
   font-family: var(--font-sans);
-  background-color: #fafafc;
+  background-color: var(--gelato-cream);
   color: var(--text-main);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -201,6 +201,11 @@ body.page-pricing .bg-3d-visual {
   position: absolute;
   inset: 0;
   z-index: 3;
-  background: radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.4) 0%, rgba(250, 250, 252, 0.75) 60%, rgba(250, 250, 252, 0.95) 100%);
+  background: 
+    radial-gradient(ellipse 70% 50% at 15% 15%, rgba(255, 203, 225, 0.42) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 55% at 85% 20%, rgba(188, 216, 236, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 60% at 50% 80%, rgba(214, 229, 189, 0.40) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 80% 85%, rgba(249, 225, 168, 0.35) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(250, 246, 243, 0.45) 0%, rgba(250, 246, 243, 0.82) 100%);
   pointer-events: none;
 }
