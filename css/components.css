@@ -1542,3 +1542,130 @@
   border-top: 1px solid rgba(249, 225, 168, 0.35);
   border-bottom: 1px solid rgba(214, 229, 189, 0.35);
 }
+
+/* ==========================================================================
+   ALFR / Friday - Fluid Luxury Pastel Cursor System
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor,
+  html.has-custom-cursor body,
+  html.has-custom-cursor a,
+  html.has-custom-cursor button,
+  html.has-custom-cursor input,
+  html.has-custom-cursor select,
+  html.has-custom-cursor textarea,
+  html.has-custom-cursor label,
+  html.has-custom-cursor [role="button"],
+  html.has-custom-cursor .card,
+  html.has-custom-cursor .concept-node,
+  html.has-custom-cursor .chip-btn {
+    cursor: none !important;
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #090D16;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  margin: -3px 0 0 -3px;
+  will-change: transform;
+  transition: opacity 0.18s ease, width 0.18s ease, height 0.18s ease, margin 0.18s ease, background 0.18s ease;
+}
+
+.cursor-aura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(159, 195, 220, 0.9);
+  background: rgba(220, 204, 236, 0.22);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999998;
+  margin: -16px 0 0 -16px;
+  will-change: transform;
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              margin 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              background 0.2s ease,
+              opacity 0.18s ease,
+              box-shadow 0.2s ease;
+}
+
+/* Hovering over clickable / interactive elements */
+.cursor-aura.cursor-hover {
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  background: rgba(188, 216, 236, 0.32);
+  border-color: rgba(99, 102, 241, 0.65);
+  box-shadow: 0 0 20px rgba(188, 216, 236, 0.6);
+}
+
+.cursor-dot.cursor-hover {
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  background: #4f46e5;
+  opacity: 0.8;
+}
+
+/* Mouse Down / Clicking Compression */
+.cursor-aura.cursor-clicking {
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  background: rgba(255, 203, 225, 0.65);
+  border-color: #FFCBE1;
+  box-shadow: 0 0 14px rgba(255, 203, 225, 0.8);
+}
+
+.cursor-dot.cursor-clicking {
+  transform: scale(0.6);
+  background: #db2777;
+}
+
+/* Text Input Focus State */
+.cursor-aura.cursor-text {
+  width: 3px;
+  height: 24px;
+  margin: -12px 0 0 -1.5px;
+  border-radius: 2px;
+  border: none;
+  background: #4f46e5;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.cursor-dot.cursor-text {
+  opacity: 0;
+}
+
+/* Hidden when outside viewport */
+.cursor-dot.cursor-hidden,
+.cursor-aura.cursor-hidden {
+  opacity: 0 !important;
+}
+
+/* Touch & Mobile Fallbacks */
+@media (hover: none) or (pointer: coarse) {
+  .cursor-dot,
+  .cursor-aura {
+    display: none !important;
+  }
+  html.has-custom-cursor,
+  html.has-custom-cursor body,
+  html.has-custom-cursor * {
+    cursor: auto !important;
+  }
+}
+
