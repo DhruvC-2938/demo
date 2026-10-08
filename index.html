@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALFR / F.R.I.D.A.Y — The Academic Operating System</title>
+  <meta name="description" content="The complete dual-layer operating system for higher education. FLUX runs your campus on WhatsApp. EduOS turns syllabus into an interactive knowledge map.">
+
+  <!-- Direct High-Performance Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="page-overview">
+
+  <!-- 3D Kinetic Background Scene -->
+  <div class="bg-3d-scene" aria-hidden="true">
+    <div class="bg-3d-visual"></div>
+    <canvas id="bg3dCanvas" class="bg-3d-canvas"></canvas>
+    <div class="bg-3d-vignette"></div>
+  </div>
+
+  <!-- Floating Pill Navbar with Icons and Pristine Alignment -->
+  <div class="nav-wrapper">
+    <header class="navbar">
+      <a href="index.html" class="nav-brand" aria-label="ALFR Home">
+        <img src="assets/alfr-logo.png" alt="ALFR" class="nav-brand-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-item-link active">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="flux.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span>FLUX OS</span>
+            </a>
+          </li>
+          <li>
+            <a href="eduos.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>EduOS</span>
+            </a>
+          </li>
+          <li>
+            <a href="cockpit.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              <span>Teacher Cockpit</span>
+            </a>
+          </li>
+          <li>
+            <a href="pricing.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 1 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span>Pricing & Pilot</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <a href="pricing.html#pilot" class="btn btn-black btn-sm">Request Pilot &rarr;</a>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">INSTITUTIONAL PLATFORM &mdash; 2026 ACADEMIC OS</div>
+        <h1 class="hero-title">
+          We market knowledge.<br>
+          Not deliver it.
+        </h1>
+        <p class="hero-description">
+          The way <strong>Zomato</strong> markets hunger that already exists. The way <strong>Nike</strong> markets the athlete inside you. The way <strong>Apple</strong> markets the creative you always believed you were.
+        </p>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 34px;">
+          An academic operating system for Indian higher education. FLUX runs campus communication on WhatsApp. EduOS turns the student who gave up into an engaged learner.
+        </p>
+
+        <div class="hero-actions">
+          <a href="flux.html" class="btn btn-black">Explore FLUX Campus OS &rarr;</a>
+          <a href="eduos.html" class="btn btn-white">Inspect EduOS Graphs &rarr;</a>
+        </div>
+
+        <div style="display: flex; gap: 36px; padding-top: 24px; border-top: 1px solid var(--border-subtle); flex-wrap: wrap;">
+          <div>
+            <div style="margin-bottom: 6px;">
+              <span class="badge-pastel blue" style="font-size: 0.65rem; padding: 2px 7px;">WHATSAPP NATIVE</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: #090d16;">1 Number</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">Entire campus coordination</div>
+          </div>
+          <div>
+            <div style="margin-bottom: 6px;">
+              <span class="badge-pastel sage" style="font-size: 0.65rem; padding: 2px 7px;">INSTANT RESOLVE</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: #090d16;">0.18s</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">Direct DB query resolution</div>
+          </div>
+          <div>
+            <div style="margin-bottom: 6px;">
+              <span class="badge-pastel lavender" style="font-size: 0.65rem; padding: 2px 7px;">RATE LIMITED</span>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: #090d16;">0.0%</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">WhatsApp ban probability</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Hero Visual Asset -->
+      <div class="hero-visual-card" style="margin: 0; box-shadow: var(--shadow-lg); border-radius: 16px; overflow: hidden; border: 1px solid var(--border-card);">
+        <img src="assets/overview-hero.jpg" alt="ALFR Campus Operating System & Knowledge Graph Architecture" class="hero-visual-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div class="hero-visual-badge">
+          <span>CAMPUS OS // DUAL INTELLIGENCE</span>
+          <span style="color: #090d16; font-weight: 600;">ACTIVE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Zomato Principle Deep Dive -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">CORE PHILOSOPHY</div>
+        <h2 class="section-title">The Zomato Principle</h2>
+        <p class="section-subtitle">
+          Zomato does not remind you to eat. You already know how to eat. Zomato creates a moment of desire at the exact time you are vulnerable to it.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; margin-bottom: 48px;">
+        <div class="card card-pastel-rose">
+          <div style="margin-bottom: 12px;">
+            <span class="badge-pastel rose">THE CONVENTIONAL GAP</span>
+          </div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 12px; color: #090d16;">The Student Who Gave Up</h3>
+          <p style="font-size: 0.98rem; margin-bottom: 16px;">
+            In a tier-2 college in India, a student opened the physics textbook and felt dread. They will never ask a robotic assistant for help because asking feels like admitting defeat.
+          </p>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Sending them an alert saying <em>"Time to study Chapter 3: Electric Current"</em> guarantees they swipe it away. The source feels like school.
+          </p>
+        </div>
+
+        <div class="card card-pastel-sage" style="border-color: var(--pastel-sage-border);">
+          <div style="margin-bottom: 12px;">
+            <span class="badge-pastel sage">THE PINCH ENGINE</span>
+          </div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 12px; color: #090d16;">Naming The Curiosity</h3>
+          <p style="font-size: 0.98rem; margin-bottom: 16px;">
+            We reach that same student on a Wednesday evening via WhatsApp with an invisible thread:
+          </p>
+          <div style="padding: 14px 18px; background: #ffffff; border-radius: 12px; border: 1px solid var(--pastel-sage-border); font-size: 0.92rem; font-weight: 500; color: #090d16; margin-bottom: 14px;">
+            "Did you know PUBG was made entirely on C++? The same logic that moves your character is what moves iPhone factory robots in China right now."
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">
+            No pressure to respond. But over weeks, the student who decided they weren't a science person starts asking questions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Five Core Beliefs Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+        <div class="card card-pastel-blue">
+          <div style="margin-bottom: 10px;">
+            <span class="badge-pastel blue">BELIEF 01</span>
+          </div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: #090d16;">Curiosity is engineered</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">Every student is curious about something. The system traces a thread from that passion into the syllabus.</p>
+        </div>
+        <div class="card card-pastel-sage">
+          <div style="margin-bottom: 10px;">
+            <span class="badge-pastel sage">BELIEF 02</span>
+          </div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: #090d16;">Dependency is curriculum</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">Physics is not chapters. It is a single continuous thread of logic: Charge &rarr; Potential &rarr; Current &rarr; Magnetic Field.</p>
+        </div>
+        <div class="card card-pastel-lavender">
+          <div style="margin-bottom: 10px;">
+            <span class="badge-pastel lavender">BELIEF 03</span>
+          </div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: #090d16;">Teacher is human bridge</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">Knowledge exists. The teacher's irreplaceable role is to make it land in another mind. We make them superhuman.</p>
+        </div>
+        <div class="card card-pastel-peach">
+          <div style="margin-bottom: 10px;">
+            <span class="badge-pastel peach">BELIEF 04</span>
+          </div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px; color: #090d16;">Notes are not learning</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">The question appears first. Notes only appear when requested. Passive copying is replaced by active recall.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Pinch Engine Playground -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">INTERACTIVE DEMO</div>
+        <h2 class="section-title">Test The Pinch Engine</h2>
+        <p class="section-subtitle">
+          Select an interest below to see how EduOS connects pop-culture obsessions directly into university academic chains.
+        </p>
+
+        <div id="pinchChips" class="chips-row" style="justify-content: center;"></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+        <!-- Clean iOS WhatsApp Card -->
+        <div class="phone-device">
+          <div class="phone-screen">
+            <div class="phone-app-header">
+              <div class="avatar-circle">E</div>
+              <div>
+                <div style="font-size: 0.92rem; font-weight: 600; color: #090d16;">Campus Companion</div>
+                <div style="font-size: 0.72rem; color: #64748b;">Online via WhatsApp</div>
+              </div>
+            </div>
+
+            <div class="phone-body">
+              <div class="chat-bubble received">
+                <span style="font-size: 0.75rem; color: #64748b; display: block; margin-bottom: 2px;">Rahul • 3rd Sem CS</span>
+                <span>Hey Rahul! Hope your Wednesday evening is relaxing.</span>
+              </div>
+
+              <div class="chat-bubble pinch-card">
+                <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #090d16; font-weight: 700; margin-bottom: 6px;">
+                  DID YOU KNOW?
+                </div>
+                <div id="pinchHookText" style="font-size: 0.95rem; font-weight: 500; color: #090d16; line-height: 1.5; margin-bottom: 12px;">
+                  Select an interest chip above...
+                </div>
+                <button class="btn btn-black btn-sm" style="width: 100%; border-radius: 8px;" onclick="alert('Curiosity Bridge Triggered! Opening concept graph in EduOS...');">
+                  Explore Connection &rarr;
+                </button>
+              </div>
+
+              <div id="pinchTimestamp" style="font-family: var(--font-mono); font-size: 0.7rem; color: #94a3b8; text-align: right; margin-top: 4px;">
+                Wednesday 7:43 PM
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Chain Explainer -->
+        <div class="card">
+          <span class="eyebrow">SYLLABUS UNLOCKED</span>
+          <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: #090d16;">The Academic Bridge</h3>
+          <p id="curiosityExplainText" style="font-size: 0.98rem; margin-bottom: 20px;">
+            EduOS pinches curiosity from real-world contexts, sparking intrinsic motivation before the student enters the lecture hall.
+          </p>
+
+          <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px;">
+              CURRICULUM NODES CONNECTED:
+            </div>
+            <div id="unlockedChainList" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;"></div>
+          </div>
+
+          <!-- Custom Query -->
+          <div>
+            <label class="form-label">Test any topic or student obsession:</label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="customPinchInput" class="form-input" placeholder="e.g. Anime, Formula 1, Beatmaking, SpaceX...">
+              <button id="btnCustomPinch" class="btn btn-black" style="white-space: nowrap;">Pin &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Two Products Overview -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">DUAL-LAYER ARCHITECTURE</div>
+        <h2 class="section-title">Two Products. Sold As One Operating System.</h2>
+        <p class="section-subtitle">
+          FLUX runs the institution's communication nervous system on WhatsApp. EduOS powers the learning and curiosity engine.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+        <!-- FLUX Card -->
+        <div class="card card-pastel-blue" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="margin-bottom: 14px;">
+              <span class="badge-pastel blue">PRODUCT 01 // FLUX</span>
+            </div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: #090d16;">Campus Nervous System</h3>
+            <p style="font-size: 1rem; margin-bottom: 20px; color: var(--text-secondary);">
+              Runs entirely on WhatsApp. Handles student inquiries, assignment extensions, grievance routing, faculty leave approvals, and rate-limited bulk broadcasts.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 28px;">
+              <li>&bull; <strong>One WhatsApp Number</strong> for 1,000+ students, 50 teachers, 5 HODs</li>
+              <li>&bull; <strong>Herald Engine:</strong> Resolves 70% of inbound queries directly from database</li>
+              <li>&bull; <strong>Nexus State Machine:</strong> Approvals via conversational Hinglish ("haan 2 din do")</li>
+              <li>&bull; <strong>Dispatch Engine:</strong> 1 msg / 0.8s rate-limiter eliminates WhatsApp ban risk</li>
+            </ul>
+          </div>
+          <a href="flux.html" class="btn btn-white" style="width: 100%;">Inspect FLUX Architecture &rarr;</a>
+        </div>
+
+        <!-- EduOS Card -->
+        <div class="card card-pastel-lavender" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="margin-bottom: 14px;">
+              <span class="badge-pastel lavender">PRODUCT 02 // EDUOS</span>
+            </div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: #090d16;">Curiosity & Learning Engine</h3>
+            <p style="font-size: 1rem; margin-bottom: 20px; color: var(--text-secondary);">
+              The student and teacher's academic companion. Replaces disconnected textbook chapters with an interconnected, living dependency graph of human knowledge.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 28px;">
+              <li>&bull; <strong>Living Knowledge Graph:</strong> Concepts connected as questions and answers</li>
+              <li>&bull; <strong>The Pinch Engine:</strong> Invisible curiosity prompts sent via WhatsApp</li>
+              <li>&bull; <strong>Teacher Cockpit:</strong> Pre-class confusion radar & 1-click lecture decks</li>
+              <li>&bull; <strong>Curriculum Intelligence:</strong> Scrapes 500+ job postings to update syllabi gaps</li>
+            </ul>
+          </div>
+          <a href="eduos.html" class="btn btn-white" style="width: 100%;">Explore EduOS Engine &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Minimal Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand" style="margin-bottom: 14px;">
+            <img src="assets/alfr-logo.png" alt="ALFR" class="nav-brand-logo" style="height: 20px;">
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 300px; line-height: 1.6;">
+            We market knowledge the way Zomato markets hunger. The complete dual-layer AI operating system for Indian higher education.
+          </p>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Architecture</div>
+          <ul class="footer-links">
+            <li><a href="flux.html" class="footer-link">FLUX (WhatsApp OS)</a></li>
+            <li><a href="eduos.html" class="footer-link">EduOS (Curiosity)</a></li>
+            <li><a href="cockpit.html" class="footer-link">Teacher Cockpit</a></li>
+            <li><a href="cockpit.html#brain" class="footer-link">Brain Background Pipelines</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Overview & Vision</a></li>
+            <li><a href="pricing.html" class="footer-link">ROI Calculator</a></li>
+            <li><a href="pricing.html#pilot" class="footer-link">Request Campus Pilot</a></li>
+            <li><a href="flux.html#simulator" class="footer-link">Live Terminal Simulator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Status</div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #090d16; background: #f1f5f9; padding: 6px 12px; border-radius: var(--radius-sm); margin-bottom: 12px;">
+            SYSTEM OPERATIONAL
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
+            Latency: 42ms | Uptime: 99.98%
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ALFR / F.R.I.D.A.Y. Built with precision for higher education.</div>
+        <div class="mono" style="font-size: 0.8rem; color: var(--text-muted);">ONE ADMIN. ZERO MANUAL MESSAGING.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bg-3d.js"></script>
+  <script src="js/pinch-engine.js"></script>
+</body>
+</html>

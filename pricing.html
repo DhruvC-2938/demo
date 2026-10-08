@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Institutional Pilot — ALFR</title>
+  <meta name="description" content="Transparent tiers and ROI calculator for Indian colleges and universities adopting F.R.I.D.A.Y.">
+
+  <!-- Direct High-Performance Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Interactive 3D Model Web Component (Spline) -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.72/build/spline-viewer.js"></script>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="page-pricing">
+
+  <!-- 3D Kinetic Background Scene -->
+  <div class="bg-3d-scene" aria-hidden="true">
+    <div class="bg-3d-visual"></div>
+    <canvas id="bg3dCanvas" class="bg-3d-canvas"></canvas>
+    <div class="bg-3d-vignette"></div>
+  </div>
+
+  <!-- Floating Pill Navbar with Icons and Pristine Alignment -->
+  <div class="nav-wrapper">
+    <header class="navbar">
+      <a href="index.html" class="nav-brand" aria-label="ALFR Home">
+        <img src="assets/alfr-logo.png" alt="ALFR" class="nav-brand-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="flux.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span>FLUX OS</span>
+            </a>
+          </li>
+          <li>
+            <a href="eduos.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>EduOS</span>
+            </a>
+          </li>
+          <li>
+            <a href="cockpit.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              <span>Teacher Cockpit</span>
+            </a>
+          </li>
+          <li>
+            <a href="pricing.html" class="nav-item-link active">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span>Pricing & Pilot</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <a href="#pilot" class="btn btn-black btn-sm">Request Pilot &rarr;</a>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding-bottom: 60px;">
+    <div class="container" style="text-align: center; max-width: 860px;">
+      <span class="eyebrow" style="margin-bottom: 16px;">CAMPUS ECONOMICS</span>
+      <h1 class="hero-title">
+        Quantify campus hours saved.
+      </h1>
+      <p class="hero-description" style="margin: 0 auto 36px auto;">
+        Replacing 47 chaotic WhatsApp groups with a single autonomous institutional number saves hundreds of hours of manual administrative burnout each month.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive ROI Calculator -->
+  <section class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(20px); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="card" style="max-width: 960px; margin: 0 auto; padding: 48px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+          <!-- Sliders -->
+          <div>
+            <span class="eyebrow" style="margin-bottom: 12px;">CALCULATE SAVINGS</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 24px; color: #090d16;">Your Institution Size</h3>
+
+            <div style="margin-bottom: 28px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 10px;">
+                <span style="font-weight: 600;">Enrolled Student Body</span>
+                <span id="studentValLabel" class="mono" style="font-weight: 700; color: #090d16;">1,000 Students</span>
+              </div>
+              <input type="range" id="studentRange" min="300" max="8000" step="50" value="1000" class="clean-slider">
+            </div>
+
+            <div style="margin-bottom: 28px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 10px;">
+                <span style="font-weight: 600;">Teaching Faculty & HODs</span>
+                <span id="facultyValLabel" class="mono" style="font-weight: 700; color: #090d16;">50 Faculty</span>
+              </div>
+              <input type="range" id="facultyRange" min="10" max="400" step="5" value="50" class="clean-slider">
+            </div>
+
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+              * Calculations based on 1,000-student benchmark: 1 msg / 0.8s rate-limiting, 70% direct SQL resolution, and 4.5 hrs saved per faculty per week.
+            </div>
+          </div>
+
+          <!-- Dynamic Output Grid -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+              <div id="metricAdminHours" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">270 hrs</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Admin Manual Messaging Saved / mo</div>
+            </div>
+
+            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+              <div id="metricFacultyHours" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">725 hrs</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Faculty Prep & Chasing Saved / mo</div>
+            </div>
+
+            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+              <div id="metricBanRisk" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">0.0%</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">WhatsApp Ban Probability</div>
+            </div>
+
+            <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+              <div id="metricCostSaved" style="font-size: 2.2rem; font-weight: 800; color: #090d16; line-height: 1.1; margin-bottom: 4px;">₹5.3L</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Monthly Productivity Value</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparent Tier Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" style="margin-bottom: 16px;">DEPLOYMENT TIERS</span>
+        <h2 class="section-title">Institutional Pricing</h2>
+        <p class="section-subtitle">
+          Transparent, per-institution licensing with zero hidden integration fees.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1040px; margin: 0 auto;">
+        <!-- Pilot -->
+        <div class="card card-pastel-blue">
+          <div style="margin-bottom: 12px;">
+            <span class="badge-pastel blue">TIER 01 // PILOT</span>
+          </div>
+          <h3 style="font-size: 1.4rem; color: #090d16; margin-bottom: 6px;">Department Pilot</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Single department proof of value</p>
+          <div style="font-size: 2.5rem; font-weight: 800; color: #090d16; margin-bottom: 6px;">Free</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">30 days • Up to 500 students</div>
+
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 32px;">
+            <li>&bull; 1 WhatsApp Number instance</li>
+            <li>&bull; Herald Auto-Responder</li>
+            <li>&bull; Nexus Hinglish Approval flow</li>
+            <li>&bull; Core Physics & CS Graphs</li>
+          </ul>
+
+          <a href="#pilot" class="btn btn-white btn-sm" style="width: 100%;">Start Department Pilot &rarr;</a>
+        </div>
+
+        <!-- Campus OS -->
+        <div class="card card-pastel-sage" style="border: 2px solid var(--pastel-sage-border); box-shadow: var(--shadow-lg);">
+          <div style="margin-bottom: 12px;">
+            <span class="badge-pastel sage">TIER 02 // RECOMMENDED</span>
+          </div>
+          <h3 style="font-size: 1.4rem; color: #090d16; margin-bottom: 6px;">Campus Operating System</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Full institution deployment</p>
+          <div style="font-size: 2.5rem; font-weight: 800; color: #090d16; margin-bottom: 6px;">Annual</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">Tailored per student body</div>
+
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 32px;">
+            <li>&bull; Full FLUX Suite (Herald, Nexus, Dispatch)</li>
+            <li>&bull; EduOS Knowledge Graph + Pinch Engine</li>
+            <li>&bull; Teacher Cockpit & Pre-Class Radar</li>
+            <li>&bull; 6 EduOS Brain Background Pipelines</li>
+            <li>&bull; NAAC & NIRF Institutional Reporting Sync</li>
+            <li>&bull; Dedicated Solutions Engineer</li>
+          </ul>
+
+          <a href="#pilot" class="btn btn-black btn-sm" style="width: 100%;">Roll Out Campus OS &rarr;</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="card card-pastel-lavender">
+          <div style="margin-bottom: 12px;">
+            <span class="badge-pastel lavender">TIER 03 // FEDERATION</span>
+          </div>
+          <h3 style="font-size: 1.4rem; color: #0a0d14; margin-bottom: 6px;">University System</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Multi-campus groups & states</p>
+          <div style="font-size: 2.5rem; font-weight: 800; color: #0a0d14; margin-bottom: 6px;">Custom</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">Multi-college isolation</div>
+
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 32px;">
+            <li>&bull; Multi-college tenant isolation</li>
+            <li>&bull; Custom fine-tuned LLM on campus data</li>
+            <li>&bull; On-Premise or Private VPC deployment</li>
+            <li>&bull; Custom SIS / ERP Database Connectors</li>
+          </ul>
+
+          <a href="#pilot" class="btn btn-white btn-sm" style="width: 100%;">Contact Enterprise Team &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Pilot Request Section -->
+  <section id="pilot" class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(20px); border-top: 1px solid var(--border-subtle);">
+    <div class="container" style="max-width: 640px;">
+      <div class="section-header" style="margin-bottom: 36px;">
+        <span class="eyebrow" style="margin-bottom: 16px;">INSTITUTIONAL ONBOARDING</span>
+        <h2 class="section-title">Request Campus Pilot</h2>
+        <p class="section-subtitle">
+          Provision an autonomous WhatsApp instance for your college in under 48 hours.
+        </p>
+      </div>
+
+      <div class="card" style="box-shadow: var(--shadow-md);">
+        <form id="pilotBookingForm">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" required class="form-input" placeholder="e.g. Dr. Ramesh Sharma">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">College / University Name</label>
+            <input type="text" required class="form-input" placeholder="e.g. Pune Institute of Computer Technology">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label class="form-label">Designation</label>
+              <select class="form-input">
+                <option>Principal / Director / Dean</option>
+                <option>Head of Department (HOD)</option>
+                <option>Professor / Faculty</option>
+                <option>Campus Administrator</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Student Population</label>
+              <select class="form-input">
+                <option>Under 1,000</option>
+                <option>1,000 - 3,000</option>
+                <option>3,000 - 8,000</option>
+                <option>8,000+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Official WhatsApp / Mobile Number</label>
+            <input type="tel" required class="form-input" placeholder="+91 98765 43210">
+          </div>
+
+          <button type="submit" class="btn btn-black" style="width: 100%; margin-top: 8px;">
+            Initialize Campus Pilot &rarr;
+          </button>
+        </form>
+
+        <!-- Success Confirmation -->
+        <div id="formSuccessState" style="display: none; text-align: center; padding: 20px 0;">
+          <div class="mono" style="font-size: 0.82rem; font-weight: 700; color: #090d16; letter-spacing: 0.1em; margin-bottom: 12px;">[CONFIRMED]</div>
+          <h4 style="font-size: 1.3rem; color: #090d16; margin-bottom: 8px;">Pilot Provisioning Request Received</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Your dedicated instance is queued. Your activation reference:
+          </p>
+          <div id="generatedTrialCode" class="mono" style="display: inline-block; padding: 10px 20px; background: #f8fafc; border: 1px solid var(--border-card); border-radius: var(--radius-sm); font-size: 1.2rem; font-weight: 700; color: #090d16; margin-bottom: 18px;">
+            FRIDAY-849201
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">
+            Our campus engineer will reach out on WhatsApp within 4 business hours to bind your Baileys bridge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Minimal Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand" style="margin-bottom: 14px;">
+            <img src="assets/alfr-logo.png" alt="ALFR" class="nav-brand-logo" style="height: 20px;">
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 300px; line-height: 1.6;">
+            We market knowledge the way Zomato markets hunger. The operating system for higher education.
+          </p>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Deployment</div>
+          <ul class="footer-links">
+            <li><a href="pricing.html#pilot" class="footer-link">Department Pilot</a></li>
+            <li><a href="pricing.html" class="footer-link">Campus Operating System</a></li>
+            <li><a href="pricing.html" class="footer-link">University Federation</a></li>
+            <li><a href="pricing.html" class="footer-link">ROI Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Overview & Vision</a></li>
+            <li><a href="flux.html">FLUX (WhatsApp OS)</a></li>
+            <li><a href="eduos.html">EduOS (Curiosity)</a></li>
+            <li><a href="cockpit.html">Teacher Cockpit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Status</div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #090d16; background: #f1f5f9; padding: 6px 12px; border-radius: var(--radius-sm); margin-bottom: 12px;">
+            48-HOUR ONBOARDING SLA
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
+            Dedicated Baileys Bridge
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ALFR / F.R.I.D.A.Y. Built with precision for higher education.</div>
+        <div class="mono" style="font-size: 0.8rem; color: var(--text-muted);">ENTERPRISE CAMPUS AUTOMATION.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bg-3d.js"></script>
+  <script src="js/roi-calculator.js"></script>
+  <script>
+    const form = document.getElementById('pilotBookingForm');
+    const success = document.getElementById('formSuccessState');
+    const codeElem = document.getElementById('generatedTrialCode');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const code = 'FRIDAY-' + Math.floor(100000 + Math.random() * 900000);
+        if (codeElem) codeElem.textContent = code;
+        form.style.display = 'none';
+        if (success) success.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>

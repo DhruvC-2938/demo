@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Cockpit & Brain Pipelines — ALFR</title>
+  <meta name="description" content="Precision teaching and autonomous background intelligence pipelines for Indian higher education.">
+
+  <!-- Direct High-Performance Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Interactive 3D Model Web Component (Spline) -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.72/build/spline-viewer.js"></script>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="page-cockpit">
+
+  <!-- 3D Kinetic Background Scene -->
+  <div class="bg-3d-scene" aria-hidden="true">
+    <div class="bg-3d-visual"></div>
+    <canvas id="bg3dCanvas" class="bg-3d-canvas"></canvas>
+    <div class="bg-3d-vignette"></div>
+  </div>
+
+  <!-- Floating Pill Navbar with Icons and Pristine Alignment -->
+  <div class="nav-wrapper">
+    <header class="navbar">
+      <a href="index.html" class="nav-brand" aria-label="ALFR Home">
+        <img src="assets/alfr-logo.png" alt="ALFR" class="nav-brand-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="flux.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span>FLUX OS</span>
+            </a>
+          </li>
+          <li>
+            <a href="eduos.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>EduOS</span>
+            </a>
+          </li>
+          <li>
+            <a href="cockpit.html" class="nav-item-link active">
+              <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              <span>Teacher Cockpit</span>
+            </a>
+          </li>
+          <li>
+            <a href="pricing.html" class="nav-item-link">
+              <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span>Pricing & Pilot</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <a href="pricing.html#pilot" class="btn btn-black btn-sm">Request Pilot &rarr;</a>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding-bottom: 60px;">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow" style="margin-bottom: 16px;">FACULTY INTELLIGENCE</span>
+        <h1 class="hero-title">
+          Alert first.<br>
+          Walk in knowing what to fix.
+        </h1>
+        <p class="hero-description">
+          Before every class, EduOS provides the professor clear telemetry: <em>"14 students don't understand potential difference. Most are confused about why charge moves. The water-height analogy may help."</em> No guessing. Precision teaching.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#simulator" class="btn btn-black">Test Deck Generator &rarr;</a>
+          <a href="#brain" class="btn btn-white">Inspect Data Pipelines &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Campus Intelligence Asset -->
+      <div class="hero-visual-card">
+        <img src="assets/campus-intelligence.jpg" alt="Autonomous Campus Intelligence Dashboard" class="hero-visual-img">
+        <div class="hero-visual-badge">
+          <span>CAMPUS INTELLIGENCE // REAL-TIME SYNAPSE</span>
+          <span style="color: #090d16; font-weight: 600;">AUTONOMOUS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Teacher Cockpit Simulator -->
+  <section id="simulator" class="section" style="background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(20px); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" style="margin-bottom: 16px;">FACULTY WORKSPACE DEMO</span>
+        <h2 class="section-title">Pre-Class Briefing & 1-Click PPT Deck</h2>
+        <p class="section-subtitle">
+          Experience what a professor sees at 10:45 AM before stepping into an 11:00 AM lecture.
+        </p>
+      </div>
+
+      <!-- Morning Alert Card -->
+      <div class="card" style="border-color: #090d16; margin-bottom: 36px;">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div class="mono" style="font-size: 1.2rem; font-weight: 800; color: #090d16;">[!]</div>
+          <div style="flex: 1;">
+            <div class="mono" style="font-size: 0.72rem; color: #64748b; margin-bottom: 4px;">
+              PRE-CLASS BRIEFING // 10:45 AM (15 MIN BEFORE LECTURE)
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px; color: #090d16;">
+              14 students are stuck on Potential Difference.
+            </h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+              Most are confused about why charge moves without mechanical force. <strong>Recommended explanation:</strong> Open class with the water-height gravity reservoir analogy.
+            </p>
+            <button id="btnGenerateDeck" class="btn btn-black btn-sm">
+              Generate 3-Slide Lecture Deck &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Deck & Question Builder Grid -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+        <!-- Slide Deck Preview -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span class="eyebrow" style="margin-bottom: 0;">AUTOMATED LECTURE DECK</span>
+            <span id="currentSlideNum" class="mono" style="font-size: 0.78rem; color: var(--text-muted);">Slide 1 of 3</span>
+          </div>
+
+          <div id="slideContentBox" style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 24px; min-height: 240px; margin-bottom: 18px;">
+            <div class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 6px;">TOPIC: POTENTIAL DIFFERENCE</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 10px; color: #090d16;">Slide 1: The Water Reservoir Paradox</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;"><em>Why does electricity need difference to exist?</em></p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-secondary);">
+              <li>&bull; A lake at 2,000m has massive potential energy, but zero kinetic flow until a gorge opens.</li>
+              <li>&bull; Coulomb force established the tension; Potential Difference opens the sluice gate.</li>
+              <li>&bull; Class Insight: 14 students confused why charge moves without friction.</li>
+            </ul>
+          </div>
+
+          <div style="display: flex; justify-content: space-between;">
+            <button id="btnPrevSlide" class="btn btn-white btn-sm">&larr; Previous Slide</button>
+            <button id="btnNextSlide" class="btn btn-black btn-sm">Next Slide &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Question Paper Configurator -->
+        <div class="card">
+          <span class="eyebrow" style="margin-bottom: 12px;">QUESTION PAPER BUILDER</span>
+          <h3 style="font-size: 1.25rem; margin-bottom: 8px; color: #090d16;">Calibrate Difficulty Curve</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 18px;">
+            Bloom's Taxonomy aligned examination generator mapped directly to syllabus concept nodes.
+          </p>
+
+          <div style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 8px;">
+              <span style="font-weight: 600;">Distribution</span>
+              <span id="diffDistributionLabel" class="mono" style="font-size: 0.8rem; color: #090d16;">Easy: 30% | Med: 50% | Hard: 20%</span>
+            </div>
+            <input type="range" id="difficultySlider" min="10" max="90" value="50" class="clean-slider">
+          </div>
+
+          <div style="background: #fafafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 14px; margin-bottom: 18px; font-size: 0.85rem;">
+            <div style="font-weight: 600; color: #090d16; margin-bottom: 4px;">Sample Generated Question #3 (Medium):</div>
+            <p style="color: var(--text-secondary); line-height: 1.5;">
+              "Two identical capacitors are charged to potential V and disconnected. If dielectric k=4 is inserted, calculate the change in electrostatic potential energy. Explain why energy decreased."
+            </p>
+          </div>
+
+          <button class="btn btn-white btn-sm" style="width: 100%;" onclick="alert('Full 50-mark syllabus-aligned Question Paper PDF generated!');">
+            Export Question Paper PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EduOS Brain 6 Background Pipelines -->
+  <section id="brain" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow" style="margin-bottom: 16px;">SCHEDULED DATA PIPELINES</span>
+        <h2 class="section-title">Pipelines, Not A Chatbot.</h2>
+        <p class="section-subtitle">
+          Background intelligence runs as scheduled APScheduler jobs that update DB tables. Campus engines read those tables directly with strict validation.
+        </p>
+      </div>
+
+      <div id="brainPipelinesGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <!-- Dynamically populated by brain-monitor.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Minimal Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand" style="margin-bottom: 14px;">
+            <img src="assets/alfr-logo.png" alt="ALFR" class="nav-brand-logo" style="height: 20px;">
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 300px; line-height: 1.6;">
+            Precision teaching and autonomous curriculum intelligence. Bridging the gap between university syllabi and industry needs.
+          </p>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Teacher Tools</div>
+          <ul class="footer-links">
+            <li><a href="cockpit.html#simulator" class="footer-link">Pre-Class Briefings</a></li>
+            <li><a href="cockpit.html#simulator" class="footer-link">1-Click PPT Generator</a></li>
+            <li><a href="cockpit.html#simulator" class="footer-link">Question Paper Builder</a></li>
+            <li><a href="cockpit.html#brain" class="footer-link">Curriculum Gap Mapper</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Overview & Vision</a></li>
+            <li><a href="flux.html">FLUX (WhatsApp OS)</a></li>
+            <li><a href="eduos.html">EduOS (Curiosity)</a></li>
+            <li><a href="pricing.html">Pricing & Pilot</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 16px; color: #090d16;">Status</div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #090d16; background: #f1f5f9; padding: 6px 12px; border-radius: var(--radius-sm); margin-bottom: 12px;">
+            6 BRAIN PIPELINES ACTIVE
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
+            Next Gap Run: Sunday 2:00 AM
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ALFR / F.R.I.D.A.Y. Built with precision for higher education.</div>
+        <div class="mono" style="font-size: 0.8rem; color: var(--text-muted);">PRECISION TEACHING AT SCALE.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bg-3d.js"></script>
+  <script src="js/teacher-cockpit.js"></script>
+  <script src="js/brain-monitor.js"></script>
+</body>
+</html>

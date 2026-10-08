@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Base Styles & Clean Modern Typography (Inter / Apple SF Style)
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: #fafafc;
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  line-height: 1.6;
+  background: transparent;
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+main, section, footer, .nav-wrapper {
+  position: relative;
+  z-index: 5;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+::selection {
+  background: #090d16;
+  color: #ffffff;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.038em;
+  line-height: 1.12;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.68;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding: 110px 0;
+  position: relative;
+}
+
+.section-header {
+  max-width: 760px;
+  margin: 0 auto 56px auto;
+  text-align: center;
+}
+
+/* Minimalist Clean Tag - No colored capsules! */
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+  color: var(--text-main);
+}
+
+.section-subtitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   Full-Bleed 3D Kinetic Background Scene
+   ========================================================================== */
+.bg-3d-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-3d-visual {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  background-image: url('../assets/bg-3d-element.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.42;
+  filter: contrast(102%) brightness(104%);
+  transform: translate3d(0, 0, 0);
+  animation: bgSculptureDrift 30s ease-in-out infinite alternate;
+}
+
+/* Distinct 3D Environments per Page */
+body.page-overview .bg-3d-visual {
+  background-image: url('../assets/bg-3d-element.jpg');
+}
+
+body.page-flux .bg-3d-visual {
+  background-image: url('../assets/bg-flux.jpg');
+}
+
+body.page-eduos .bg-3d-visual {
+  background-image: url('../assets/bg-eduos.jpg');
+}
+
+body.page-cockpit .bg-3d-visual {
+  background-image: url('../assets/bg-cockpit.jpg');
+}
+
+body.page-pricing .bg-3d-visual {
+  background-image: url('../assets/bg-pricing.jpg');
+}
+
+@keyframes bgSculptureDrift {
+  0% {
+    transform: scale(1) translate(0px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.04) translate(-12px, 8px) rotate(0.4deg);
+  }
+  100% {
+    transform: scale(1.02) translate(10px, -6px) rotate(-0.3deg);
+  }
+}
+
+.bg-3d-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bg-3d-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.4) 0%, rgba(250, 250, 252, 0.75) 60%, rgba(250, 250, 252, 0.95) 100%);
+  pointer-events: none;
+}

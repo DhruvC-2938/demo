@@ -1,0 +1,85 @@
+/* ==========================================================================
+   F.R.I.D.A.Y / ALFR - Design System Tokens
+   Aesthetic: YC / Apple Minimalist Monochromatic
+   Pure Black & White with Subtle Graphite & Serene Translucency
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Surfaces */
+  --bg-pure: #ffffff;
+  --bg-subtle: #fafafc;
+  --bg-surface: #f4f5f7;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f8fafc;
+
+  /* Typography Colors */
+  --text-main: #090d16;
+  --text-secondary: #475569;
+  --text-muted: #828fa3;
+  --text-light: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* Hairline Borders */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-light: rgba(0, 0, 0, 0.09);
+  --border-card: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.22);
+
+  /* Clean Monochrome Accents */
+  --brand-black: #090d16;
+  --brand-gray: #334155;
+  --brand-light-gray: #f1f5f9;
+
+  /* Soothing Pastel Palette System */
+  --pastel-blue-bg: #eff6ff;
+  --pastel-blue-surface: #dbeafe;
+  --pastel-blue-border: #bfdbfe;
+  --pastel-blue-text: #1d4ed8;
+
+  --pastel-sage-bg: #f0fdf4;
+  --pastel-sage-surface: #dcfce7;
+  --pastel-sage-border: #bbf7d0;
+  --pastel-sage-text: #15803d;
+
+  --pastel-lavender-bg: #f5f3ff;
+  --pastel-lavender-surface: #ede9fe;
+  --pastel-lavender-border: #ddd6fe;
+  --pastel-lavender-text: #6d28d9;
+
+  --pastel-peach-bg: #fff7ed;
+  --pastel-peach-surface: #ffedd5;
+  --pastel-peach-border: #fed7aa;
+  --pastel-peach-text: #c2410c;
+
+  --pastel-rose-bg: #fff1f2;
+  --pastel-rose-surface: #ffe4e6;
+  --pastel-rose-border: #fecdd3;
+  --pastel-rose-text: #be123c;
+
+  --pastel-amber-bg: #fffbeb;
+  --pastel-amber-surface: #fef3c7;
+  --pastel-amber-border: #fde68a;
+  --pastel-amber-text: #b45309;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.07);
+  --shadow-navbar: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 8px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
