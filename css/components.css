@@ -1544,158 +1544,32 @@
 }
 
 /* ==========================================================================
-   ALFR / Friday - Fluid Liquid Jelly & Pastel Stardust Cursor System
+   ALFR / Friday - Refined Native Ergonomic Cursor & Hover Transitions
+   Clean, instantaneous OS pointer precision with fluid micro-interactions
    ========================================================================== */
-@media (hover: hover) and (pointer: fine) {
-  html.has-custom-cursor,
-  html.has-custom-cursor body,
-  html.has-custom-cursor a,
-  html.has-custom-cursor button,
-  html.has-custom-cursor input,
-  html.has-custom-cursor select,
-  html.has-custom-cursor textarea,
-  html.has-custom-cursor label,
-  html.has-custom-cursor [role="button"],
-  html.has-custom-cursor .card,
-  html.has-custom-cursor .concept-node,
-  html.has-custom-cursor .chip-btn {
-    cursor: none !important;
-  }
+a,
+button,
+[role="button"],
+.btn,
+.chip-btn,
+.gv-ctrl-btn,
+.gv-subject-btn,
+.concept-node,
+label,
+select,
+input[type="submit"],
+input[type="button"],
+.nav-item-link,
+.footer-link {
+  cursor: pointer;
 }
 
-/* Stardust Comet Particle Canvas */
-#customCursorCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 999990;
+input[type="text"],
+input[type="search"],
+input[type="email"],
+textarea,
+[contenteditable="true"] {
+  cursor: text;
 }
 
-/* Precision Focal Core Dot */
-.cursor-core {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  margin: -2.5px 0 0 -2.5px;
-  background: #090D16;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 999999;
-  will-change: transform;
-  transition: opacity 0.18s ease, transform 0.15s ease, background 0.18s ease;
-}
-
-/* Viscous Liquid Jelly Droplet (Elastic Velocity Stretch) */
-.cursor-jelly {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  margin: -15px 0 0 -15px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 999997;
-  will-change: transform;
-  background: radial-gradient(circle at 35% 35%, rgba(220, 204, 236, 0.45) 0%, rgba(188, 216, 236, 0.25) 55%, rgba(255, 218, 180, 0.18) 100%);
-  border: 1.5px solid rgba(159, 195, 220, 0.85);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  box-shadow: 0 0 16px rgba(188, 216, 236, 0.5), inset 0 0 8px rgba(220, 204, 236, 0.3);
-  transition: opacity 0.18s ease,
-              background 0.22s ease,
-              border-color 0.22s ease,
-              box-shadow 0.22s ease;
-}
-
-/* Hovering over Interactive Targets (Expanded Frosted Spotlight) */
-.cursor-jelly.cursor-hover {
-  background: radial-gradient(circle at 30% 30%, rgba(188, 216, 236, 0.55) 0%, rgba(220, 204, 236, 0.35) 70%, rgba(214, 229, 189, 0.2) 100%);
-  border-color: rgba(99, 102, 241, 0.8);
-  box-shadow: 0 0 24px rgba(188, 216, 236, 0.7), 0 0 45px rgba(220, 204, 236, 0.35);
-}
-
-.cursor-core.cursor-hover {
-  background: #4f46e5;
-  transform: scale(1.2);
-}
-
-/* Mouse Down / Clicking Spring Compression */
-.cursor-jelly.cursor-clicking {
-  background: rgba(255, 203, 225, 0.7);
-  border-color: #FFCBE1;
-  box-shadow: 0 0 22px rgba(255, 203, 225, 0.9);
-}
-
-.cursor-core.cursor-clicking {
-  transform: scale(0.6);
-  background: #db2777;
-}
-
-/* Text Input Caret State */
-.cursor-jelly.cursor-text {
-  border-radius: 2px;
-  background: #4f46e5;
-  border: none;
-  box-shadow: 0 0 12px rgba(79, 70, 229, 0.6);
-}
-
-.cursor-core.cursor-text {
-  opacity: 0;
-}
-
-/* Floating Dynamic Context HUD Badge */
-.cursor-badge {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 999998;
-  will-change: transform;
-  display: inline-flex;
-  align-items: center;
-  background: rgba(9, 13, 22, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  padding: 3px 9px;
-  border-radius: 20px;
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.08);
-  white-space: nowrap;
-  transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1), transform 0.15s ease-out;
-}
-
-/* Fade Out States */
-.cursor-jelly.cursor-hidden,
-.cursor-core.cursor-hidden,
-.cursor-badge.cursor-hidden {
-  opacity: 0 !important;
-  transform: scale(0.5) !important;
-}
-
-/* Mobile & Touch Screens Suppression */
-@media (hover: none) or (pointer: coarse) {
-  #customCursorCanvas,
-  .cursor-jelly,
-  .cursor-core,
-  .cursor-badge {
-    display: none !important;
-  }
-  html.has-custom-cursor,
-  html.has-custom-cursor body,
-  html.has-custom-cursor * {
-    cursor: auto !important;
-  }
-}
 
