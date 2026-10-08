@@ -1544,7 +1544,7 @@
 }
 
 /* ==========================================================================
-   ALFR / Friday - Fluid Luxury Pastel Cursor System
+   ALFR / Friday - Fluid Liquid Jelly & Pastel Stardust Cursor System
    ========================================================================== */
 @media (hover: hover) and (pointer: fine) {
   html.has-custom-cursor,
@@ -1563,103 +1563,133 @@
   }
 }
 
-.cursor-dot {
+/* Stardust Comet Particle Canvas */
+#customCursorCanvas {
   position: fixed;
   top: 0;
   left: 0;
-  width: 6px;
-  height: 6px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999990;
+}
+
+/* Precision Focal Core Dot */
+.cursor-core {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
   background: #090D16;
   border-radius: 50%;
   pointer-events: none;
   z-index: 999999;
-  margin: -3px 0 0 -3px;
   will-change: transform;
-  transition: opacity 0.18s ease, width 0.18s ease, height 0.18s ease, margin 0.18s ease, background 0.18s ease;
+  transition: opacity 0.18s ease, transform 0.15s ease, background 0.18s ease;
 }
 
-.cursor-aura {
+/* Viscous Liquid Jelly Droplet (Elastic Velocity Stretch) */
+.cursor-jelly {
   position: fixed;
   top: 0;
   left: 0;
-  width: 32px;
-  height: 32px;
-  border: 1.5px solid rgba(159, 195, 220, 0.9);
-  background: rgba(220, 204, 236, 0.22);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 999998;
-  margin: -16px 0 0 -16px;
+  z-index: 999997;
   will-change: transform;
-  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              margin 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.2s ease,
-              background 0.2s ease,
-              opacity 0.18s ease,
-              box-shadow 0.2s ease;
+  background: radial-gradient(circle at 35% 35%, rgba(220, 204, 236, 0.45) 0%, rgba(188, 216, 236, 0.25) 55%, rgba(255, 218, 180, 0.18) 100%);
+  border: 1.5px solid rgba(159, 195, 220, 0.85);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  box-shadow: 0 0 16px rgba(188, 216, 236, 0.5), inset 0 0 8px rgba(220, 204, 236, 0.3);
+  transition: opacity 0.18s ease,
+              background 0.22s ease,
+              border-color 0.22s ease,
+              box-shadow 0.22s ease;
 }
 
-/* Hovering over clickable / interactive elements */
-.cursor-aura.cursor-hover {
-  width: 52px;
-  height: 52px;
-  margin: -26px 0 0 -26px;
-  background: rgba(188, 216, 236, 0.32);
-  border-color: rgba(99, 102, 241, 0.65);
-  box-shadow: 0 0 20px rgba(188, 216, 236, 0.6);
+/* Hovering over Interactive Targets (Expanded Frosted Spotlight) */
+.cursor-jelly.cursor-hover {
+  background: radial-gradient(circle at 30% 30%, rgba(188, 216, 236, 0.55) 0%, rgba(220, 204, 236, 0.35) 70%, rgba(214, 229, 189, 0.2) 100%);
+  border-color: rgba(99, 102, 241, 0.8);
+  box-shadow: 0 0 24px rgba(188, 216, 236, 0.7), 0 0 45px rgba(220, 204, 236, 0.35);
 }
 
-.cursor-dot.cursor-hover {
-  width: 4px;
-  height: 4px;
-  margin: -2px 0 0 -2px;
+.cursor-core.cursor-hover {
   background: #4f46e5;
-  opacity: 0.8;
+  transform: scale(1.2);
 }
 
-/* Mouse Down / Clicking Compression */
-.cursor-aura.cursor-clicking {
-  width: 24px;
-  height: 24px;
-  margin: -12px 0 0 -12px;
-  background: rgba(255, 203, 225, 0.65);
+/* Mouse Down / Clicking Spring Compression */
+.cursor-jelly.cursor-clicking {
+  background: rgba(255, 203, 225, 0.7);
   border-color: #FFCBE1;
-  box-shadow: 0 0 14px rgba(255, 203, 225, 0.8);
+  box-shadow: 0 0 22px rgba(255, 203, 225, 0.9);
 }
 
-.cursor-dot.cursor-clicking {
+.cursor-core.cursor-clicking {
   transform: scale(0.6);
   background: #db2777;
 }
 
-/* Text Input Focus State */
-.cursor-aura.cursor-text {
-  width: 3px;
-  height: 24px;
-  margin: -12px 0 0 -1.5px;
+/* Text Input Caret State */
+.cursor-jelly.cursor-text {
   border-radius: 2px;
-  border: none;
   background: #4f46e5;
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+  border: none;
+  box-shadow: 0 0 12px rgba(79, 70, 229, 0.6);
 }
 
-.cursor-dot.cursor-text {
+.cursor-core.cursor-text {
   opacity: 0;
 }
 
-/* Hidden when outside viewport */
-.cursor-dot.cursor-hidden,
-.cursor-aura.cursor-hidden {
-  opacity: 0 !important;
+/* Floating Dynamic Context HUD Badge */
+.cursor-badge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999998;
+  will-change: transform;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(9, 13, 22, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+  transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1), transform 0.15s ease-out;
 }
 
-/* Touch & Mobile Fallbacks */
+/* Fade Out States */
+.cursor-jelly.cursor-hidden,
+.cursor-core.cursor-hidden,
+.cursor-badge.cursor-hidden {
+  opacity: 0 !important;
+  transform: scale(0.5) !important;
+}
+
+/* Mobile & Touch Screens Suppression */
 @media (hover: none) or (pointer: coarse) {
-  .cursor-dot,
-  .cursor-aura {
+  #customCursorCanvas,
+  .cursor-jelly,
+  .cursor-core,
+  .cursor-badge {
     display: none !important;
   }
   html.has-custom-cursor,
